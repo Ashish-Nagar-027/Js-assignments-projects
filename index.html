@@ -37,7 +37,21 @@
       .project {
         border: 2px solid black;
         padding: 1rem;
-        margin: 0.8rem 0.5rem;
+        margin: 1rem;
+        width: fit-content;
+        background-color: rgb(206, 200, 200);
+        transition: all 0.3s ease-in-out;
+        width: 250px;
+      }
+
+      .project:hover {
+        transform: scale(1.1);
+      }
+
+      .porjects {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2% 5%;
       }
     </style>
   </head>
@@ -52,7 +66,12 @@
         <div class="project">
           <h3>Project 1 : Name Conversion</h3>
           <p>Convert text in</p>
-          <button><a href="./02NameConversion/index.html">Checkout</a></button>
+          <button><a href="./1. NameConversion/index.html">Checkout</a></button>
+        </div>
+        <div class="project">
+          <h3>Project 2 : Color Changer</h3>
+          <p>Change background color</p>
+          <button><a href="./2. ColorChanger/index.html">Checkout</a></button>
         </div>
       </div>
     </div>
