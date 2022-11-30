@@ -17,10 +17,7 @@ btn.addEventListener("click", () => {
     .join("");
 
   // camelCase convert
-  camelCase.innerText = inputValue
-    .split(" ")
-    .map((word) => word[0].toUpperCase() + word.substring(1))
-    .join("");
+  camelCase.innerText = camelCasefunction(inputValue);
 
   //snake case
   snakeCase.innerText = inputValue.split(" ").join("_");
@@ -40,3 +37,12 @@ btn.addEventListener("click", () => {
     .map((word) => word.toUpperCase())
     .join("-");
 });
+
+// camel case function
+function camelCasefunction(str) {
+  return str
+    .replace(/(?:^\w|[A-Z]|\b\w)/g, function (word, index) {
+      return index == 0 ? word.toLowerCase() : word.toUpperCase();
+    })
+    .replace(/\s+/g, "");
+}
